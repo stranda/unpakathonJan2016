@@ -1,0 +1,37 @@
+"idExperiment","name","startDate","endDate","description","embargoed"
+1,"cofc-first","2007-02-01","2007-05-01","Single greenhouse environment.  Increasing day length.  ",1
+2,"cofc-second","2007-11-30","2008-02-01","Single greenhouse, multiple environments",1
+3,"1a1","2011-09-01","2011-11-01","Experiment 1a, rep 1 of first exp proposed for UnPAK",1
+4,"CofC-SF-1","2011-09-01","2011-11-01","First smartfarm at CofC",0
+5,"CofC-DF-1","2011-05-15","2011-07-01","First farming effort (Giant Farm Summer 2011)",0
+6,"CofC-SF-2","2011-11-01","2011-12-15","Smartfarm 2 CofC",0
+7,"CofC-SF-3","2011-12-15","2012-01-30","Smartfarm 3 CofC",0
+8,"CofC-SF-4","2012-01-16","2012-02-28","Smartfarm 4 CofC",0
+9,"CofC-SF-5","2012-05-15","2012-06-30","Smartfarm 5 CofC",0
+10,"CofC-SF-6","2012-07-15","2012-08-30","Smartfarm 6 CofC",0
+11,"NEW-SEEDS","2006-01-01","2030-12-31","Dummy experiment placeholder for novel germplasm introduced into unpak",1
+12,"BC-DF-1","2011-05-15","2011-07-01","First effort at farming at Barnard (Giant farm summer 2011)",0
+13,"1a2","2012-11-01","2013-04-01","Experiment 1a, rep 1 of first exp proposed for UnPAK",1
+14,"3pt1","2013-04-01","0000-00-00","Unpak experiment 3 part 1",0
+15,"Phyt2A","0000-00-00","0000-00-00","Phytometer Trial 1",0
+16,"Phyt2B","0000-00-00","0000-00-00","Phytometer Trial 2",0
+17,"BC-SF01","0000-00-00","0000-00-00","Smart Farm at Barnard",0
+18,"BC-SF02","0000-00-00","0000-00-00","Smart Farm 2 at Barnard",0
+19,"3pt2","0000-00-00","0000-00-00","Experiment 3 part 2",1
+20,"CofC-SF10","2014-11-24","2014-12-31","smartfarm 10 at cofc",0
+21,"CofC-SF11","2014-12-14","2015-01-15","smartfarm 11 at CofC",0
+22,"BD-SF08","2015-06-01","2015-06-30","smartfarm 8 at Barnard",0
+23,"CofC-SF12","2015-01-15","0000-00-00","smartfarm 12",0
+24,"CofC-SF13","2015-02-12","0000-00-00","smartfarm 13",0
+25,"CofC-SF14","2015-03-10","0000-00-00","smartfarm 14",0
+26,"CofC-SF15","2015-04-10","0000-00-00","smartfarm 15",0
+27,"CofC-SF16","2015-04-30","0000-00-00","smartfarm 16",0
+28,"CofC-SF17","2015-05-27","0000-00-00","smartfarm 17",0
+29,"CofC-SF18","2015-06-18","0000-00-00","smartfarm 18",0
+30,"1a3","2015-10-13","0000-00-00","experiment 1 part 3",0
+31,"3pt5","2015-05-14","0000-00-00","experiment 3 part 5",0
+32,"1a4","2014-06-13","0000-00-00","experiment 1 part 4",0
+33,"3pt4","2015-01-13","0000-00-00","experiment 3 pt 4",0
+34,"VT_Expt3","2015-06-09","0000-00-00","VT Experiment 3",0
+35,"TCTC_Expt3","2015-04-28","0000-00-00","TCTC Experiment 3 conducted at CofC",0
+36,"Benedict_Expt3","2015-05-11","0000-00-00","Benedict Experiment 3 Conducted at CofC",0
