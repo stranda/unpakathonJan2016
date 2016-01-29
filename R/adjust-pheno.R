@@ -7,7 +7,7 @@
 #require(dplyr)
 
 #' @name phytcorrect
-#' @description Correct phenotypes by the mean of the phytometers in each growth chamber in each Experiment
+#' @title Correct phenotypes by the mean of the phytometers in each growth chamber in each Experiment
 #' @param dat is a dataframe in long format
 #' @param pheno is a character vector of phenotypes
 #' @param classifier is a character vector of classifying columns in the dataframe (exp, facility, etc)
@@ -39,7 +39,7 @@ phytcorrect <- function(dat, pheno, classifier, lineid="line") {
 #growth chamber
 #
 #' @name allcorrect
-#' @description Correct phenotypes by the mean of all plants in each growth chamber in each Experiment
+#' @title description Correct phenotypes by the mean of all plants in each growth chamber in each Experiment
 #' @param dat is a dataframe in long format
 #' @param pheno is a character vector of phenotypes
 #' @param classifier is a character vector of classifying columns in the dataframe (exp, facility, etc)

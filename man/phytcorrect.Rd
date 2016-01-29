@@ -2,6 +2,7 @@
 % Please edit documentation in R/adjust-pheno.R
 \name{phytcorrect}
 \alias{phytcorrect}
+\title{Correct phenotypes by the mean of the phytometers in each growth chamber in each Experiment}
 \usage{
 phytcorrect(dat, pheno, classifier, lineid = "line")
 }
@@ -13,8 +14,5 @@ phytcorrect(dat, pheno, classifier, lineid = "line")
 \item{classifier}{is a character vector of classifying columns in the dataframe (exp, facility, etc)}
 
 \item{lineid}{the name of the column that contains Accessions (e.g. SALK lines or CS numbers)}
-}
-\description{
-Correct phenotypes by the mean of the phytometers in each growth chamber in each Experiment
 }
 

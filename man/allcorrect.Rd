@@ -2,6 +2,7 @@
 % Please edit documentation in R/adjust-pheno.R
 \name{allcorrect}
 \alias{allcorrect}
+\title{description Correct phenotypes by the mean of all plants in each growth chamber in each Experiment}
 \usage{
 allcorrect(dat, pheno, classifier, lineid)
 }
@@ -13,8 +14,5 @@ allcorrect(dat, pheno, classifier, lineid)
 \item{classifier}{is a character vector of classifying columns in the dataframe (exp, facility, etc)}
 
 \item{lineid}{the name of the column that contains Accessions (e.g. SALK lines or CS numbers)}
-}
-\description{
-Correct phenotypes by the mean of all plants in each growth chamber in each Experiment
 }
 
