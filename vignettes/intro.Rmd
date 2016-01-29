@@ -92,15 +92,31 @@ Everything so far has been performed on uncorrected phenotypes.
 
 We can correct phenotypes based on the Treatment, Experiment, and Facility combinations
 
+Here's an example correcting for phytometers
 
 ```{r}
 library(reshape)
 plotdf = phenolong %>% filter(variable %in% c("fruitnum","days.to.bolt")) %>% cast(fun.aggregate=mean)
 
 
-phenoadj <- phytcorrect(phenolong,c("fruitnum","days.to.bolt"),c("plantID","treatment","facility","experiment"),lineid="accession")
+plotadj <- phytcorrect(phenolong,c("fruitnum","days.to.bolt"),c("plantID","treatment","facility","experiment"),lineid="accession") %>% cast(fun.aggregate=mean)
 
+par(mfrow=c(1,2))
+plot(fruitnum~days.to.bolt,data=plotdf,main="unadjusted")
+plot(fruitnum~days.to.bolt,data=plotadj,main="adjusted")
 
+par(mfrow=c(1,1))
+```
 
+And here correcting by all plant means
+```{r}
+
+plotadj <- allcorrect(phenolong,c("fruitnum","days.to.bolt"),c("plantID","treatment","facility","experiment"),lineid="accession") %>% cast(fun.aggregate=mean)
+
+par(mfrow=c(1,2))
+plot(fruitnum~days.to.bolt,data=plotdf,main="unadjusted")
+plot(fruitnum~days.to.bolt,data=plotadj,main="adjusted")
+
+par(mfrow=c(1,1))
 ```
 
