@@ -1,7 +1,14 @@
 ---
 title: "Getting going with unpak data"
-output: pdf_document
+author: "A Strand"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting going with unpak data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
+
 The unpakathonJan2016 package is primarily a datafreeze of the unpak database at the end of Jan 2016.  
 
 This vignette shows how to interact with these data, once the package is installed and loaded into the current R session
@@ -101,11 +108,9 @@ plotdf = phenolong %>% filter(variable %in% c("fruitnum","days.to.bolt")) %>% ca
 
 plotadj <- phytcorrect(phenolong,c("fruitnum","days.to.bolt"),c("plantID","treatment","facility","experiment"),lineid="accession") %>% cast(fun.aggregate=mean)
 
-par(mfrow=c(1,2))
 plot(fruitnum~days.to.bolt,data=plotdf,main="unadjusted")
 plot(fruitnum~days.to.bolt,data=plotadj,main="adjusted")
 
-par(mfrow=c(1,1))
 ```
 
 And here correcting by all plant means
@@ -113,10 +118,8 @@ And here correcting by all plant means
 
 plotadj <- allcorrect(phenolong,c("fruitnum","days.to.bolt"),c("plantID","treatment","facility","experiment"),lineid="accession") %>% cast(fun.aggregate=mean)
 
-par(mfrow=c(1,2))
 plot(fruitnum~days.to.bolt,data=plotdf,main="unadjusted")
 plot(fruitnum~days.to.bolt,data=plotadj,main="adjusted")
 
-par(mfrow=c(1,1))
 ```
 
