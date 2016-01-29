@@ -94,7 +94,11 @@ We can correct phenotypes based on the Treatment, Experiment, and Facility combi
 
 
 ```{r}
-phenoadj <- phytcorrect(phenolong,c("fruitnum","days.to.bolt"),c("treatment","facility","experiment"),lineid="accession")
+library(reshape)
+plotdf = phenolong %>% filter(variable %in% c("fruitnum","days.to.bolt")) %>% cast(fun.aggregate=mean)
+
+
+phenoadj <- phytcorrect(phenolong,c("fruitnum","days.to.bolt"),c("plantID","treatment","facility","experiment"),lineid="accession")
 
 
 
