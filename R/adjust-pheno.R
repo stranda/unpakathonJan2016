@@ -26,7 +26,7 @@ phytcorrect <- function(dat, pheno, classifier, lineid="line") {
             select_(.dots=select.cond)%>%
                 group_by_(.dots=group.cond) %>% summarise_each(funs(mean(.,na.rm=F)))
         names(phytmn)[names(phytmn)=="value"] <- "mean"
-        if (names(phytmn)%in%"plantID") {phytmn <- phytmn[,-grep("plantID",names(phytmn))]}
+        if ("plantID" %in% names(phytmn)) {phytmn <- phytmn[,-grep("plantID",names(phytmn))]}
 
 ### adj dat by phytometer means
         select.cond <- paste0(c(classifier,lineid,"variable","value"))
@@ -58,8 +58,8 @@ allcorrect <- function(dat, pheno, classifier, lineid) {
             select_(.dots=select.cond)%>%
                 group_by_(.dots=group.cond) %>% summarise_each(funs(mean(.,na.rm=F)))
         names(phytmn)[names(phytmn)=="value"] <- "mean"  
+    if ("plantID" %in% names(phytmn)) {phytmn <- phytmn[,-grep("plantID",names(phytmn))]}
 
-    if (names(phytmn)%in%"plantID") {phytmn <- phytmn[,-grep("plantID",names(phytmn))]}
     
 ### adj dat by phytometer means
         select.cond <- paste0(c(classifier,lineid,"variable","value"))
