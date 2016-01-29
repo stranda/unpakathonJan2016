@@ -88,5 +88,15 @@ ggplot(data=newdf, aes(x=AverageExpressFlowerStage9, y=log(value+1)))+geom_point
 
 #Correcting phenotypes
 
+Everything so far has been performed on uncorrected phenotypes.
 
+We can correct phenotypes based on the Treatment, Experiment, and Facility combinations
+
+
+```{r}
+phenoadj <- phytcorrect(phenolong,c("fruitnum","days.to.bolt"),c("treatment","facility","experiment"),lineid="accession")
+
+
+
+```
 
