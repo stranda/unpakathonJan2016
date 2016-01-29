@@ -46,7 +46,7 @@ unique(nofarm.long$experiment)
 ```
 Or maybe you only want to look at the distribution of individual fruitnums for experiment1
 ```{r}
-exp1 <- phenolong %>% filter(meta.experiment=="1") %>% filter(phenotype=="fruitnum") 
+exp1 <- phenolong %>% filter(meta.experiment=="1") %>% filter(variable=="fruitnum") 
 library(ggplot2) #might as well use ggplot to start with
 ggplot(data=exp1, aes(value, fill=experiment)) + geom_histogram(binwidth=50)
 ```
@@ -55,7 +55,7 @@ Here's the same exercise but getting averages for every replicate within a growt
 
 ```{r}
 exp1mn <- phenolong %>% filter(meta.experiment=="1") %>%
-  filter(phenotype=="fruitnum") %>%
+  filter(variable=="fruitnum") %>%
   group_by(experiment,accession) %>%
   summarise(value=mean(value,na.rm=T))
 ggplot(data=exp1mn, aes(value, fill=experiment)) + geom_histogram(binwidth=50)
@@ -77,7 +77,7 @@ The information in the other tables can be compared to phenotypes through mergin
 Say you wanted to look at how insertion location might influence phenotype.  You could merge in the 'independent' table and look at the result
 
 ```{r}
-newdf <- left_join(phenolong,independent) %>% filter(phenotype=="fruitnum")
+newdf <- left_join(phenolong,independent) %>% filter(variable=="fruitnum")
 ggplot(data=newdf, aes(x=InsertLocation, y=log(value+1)))+geom_boxplot()
 ```
 

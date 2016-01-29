@@ -28,8 +28,8 @@ phenolong <-
     phenolong[,!names(phenolong)%in%c("Treatment","Facility","Experiment")]
 names(phenolong) <- c("plantID","accession","treatment","experiment","meta.experiment","facility","variable","value")
 phenowide <- cast(phenolong,fun.aggregate=mean)
-phenolong$phenotype <- phenolong$variable
-phenolong <- phenolong[,!names(phenolong)%in%"variable"]
+#phenolong$phenotype <- phenolong$variable
+#phenolong <- phenolong[,!names(phenolong)%in%"variable"]
 
 unpak_db <- src_mysql(dbname="unpak",host = "localhost", user = dbInfo[,2], password = dbInfo[,3])  #this needs improvement for security
 
