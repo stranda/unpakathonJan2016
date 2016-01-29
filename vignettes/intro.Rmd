@@ -86,5 +86,7 @@ or you could look at expression at flower stage 9
 ggplot(data=newdf, aes(x=AverageExpressFlowerStage9, y=log(value+1)))+geom_point()
 ```
 
+#Correcting phenotypes
+
 
 

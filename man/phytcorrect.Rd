@@ -2,7 +2,6 @@
 % Please edit documentation in R/adjust-pheno.R
 \name{phytcorrect}
 \alias{phytcorrect}
-\title{Correct phenotypes by the mean of the phytometers in each growth chamber in each Experiment}
 \usage{
 phytcorrect(dat, pheno, classifier, lineid = "line")
 }
