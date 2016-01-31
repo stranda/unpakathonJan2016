@@ -1,7 +1,15 @@
 ---
 title: "January 2016 unpakathon results"
-output: html_document
+author: "A Strand"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Getting going with unpak data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
+
+#Summary of plots we looked at during this initial hacakthon
 
 #quick scan for weird data points
 
@@ -28,7 +36,7 @@ with(phenolong %>% filter(meta.experiment != "farm") %>% select(accession,experi
 
 Let's check the distribution of values for each phenotype
 
-```{r,fig.height=10}
+```{r,fig.height=13,fig.width=10}
 
 ggplot(phenolong,aes(value)) + geom_histogram() + facet_wrap(~variable,scales = "free",ncol=4)
 
@@ -57,7 +65,7 @@ phenolong = phenolong.quant
 ```
 
 For example, look at the ggplot from above now
-```{r,fig.height=10}
+```{r,fig.height=13,fig.width=10}
 ggplot(phenolong%>%filter(inrange),aes(value)) + geom_histogram() + facet_wrap(~variable,scales = "free",ncol=4)
 ```
 
