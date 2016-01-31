@@ -3,6 +3,8 @@ title: "January 2016 unpakathon results"
 output: html_document
 ---
 
+#Summary of plots we looked at during this initial hacakthon
+
 #quick scan for weird data points
 
 Load some libraries
