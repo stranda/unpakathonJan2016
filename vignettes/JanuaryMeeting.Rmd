@@ -4,7 +4,7 @@ author: "A Strand"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Getting going with unpak data}
+  %\VignetteIndexEntry{Summary of the work done during January meeting}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
