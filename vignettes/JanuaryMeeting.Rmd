@@ -13,9 +13,10 @@ vignette: >
 
 #quick scan for weird data points
 
-Load some libraries
 
-```{r,echo=F}
+
+```{r,echo=F,results='hide'} 
+#Load some libraries
 library(unpakathonJan2016)
 library(dplyr)
 library(ggplot2)
